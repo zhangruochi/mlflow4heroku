@@ -7,12 +7,7 @@ WORKDIR $HOME
 COPY . $HOME
 
 RUN pip install --upgrade pip && \
-pip install -r requirements.txt && \ 
-pwd && ls && ls home &&  \ 
-conda update -n base -c defaults conda && \ 
-conda env list && \ 
-pip freeze list  && \ 
-which mlflow 
+pip install -r requirements.txt
     
 EXPOSE 5000
 
