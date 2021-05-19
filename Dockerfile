@@ -6,9 +6,7 @@ ENV HOME /
 WORKDIR $HOME
 COPY . $HOME
 
-RUN conda create -n mlflow python==3.8 && \
-conda activate mlflow && \
-pip install --upgrade pip && \
+RUN pip install --upgrade pip && \
 pip install mlflow[extras] && \
 pip install -r requirements.txt
     
