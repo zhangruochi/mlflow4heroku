@@ -7,7 +7,7 @@ WORKDIR $HOME
 COPY . $HOME
 
 RUN pip install --upgrade pip && \
-    pip install -r requirements.txt &&
+    pip install -r requirements.txt
     
 EXPOSE 5000
 
