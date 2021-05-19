@@ -7,11 +7,16 @@ WORKDIR $HOME
 COPY . $HOME
 
 RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+pip install -r requirements.txt && \ 
+pwd && ls && ls home &&  \ 
+conda update -n base -c defaults conda && \ 
+conda env list && \ 
+pip freeze list  && \ 
+which mlflow 
     
 EXPOSE 5000
 
-CMD - mlflow server \
+CMD mlflow server \
     --backend-store-uri sqlite:///mlflow.db \
     --default-artifact-root wasbs://copper@comr2.blob.core.windows.net/models \
     --host 0.0.0.0
