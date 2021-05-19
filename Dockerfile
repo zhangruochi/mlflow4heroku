@@ -15,5 +15,6 @@ EXPOSE 5000
 CMD mlflow server \
     --backend-store-uri postgresql://zhangruochi@silexon:Zhang3li4zrc1230@silexon.postgres.database.azure.com:5432/copper \
     --default-artifact-root wasbs://copper@comr2.blob.core.windows.net/models \
-    --host 0.0.0.0
+    --host 0.0.0.0 \
+    --port 8080
 
