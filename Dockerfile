@@ -7,13 +7,8 @@ WORKDIR $HOME
 COPY . $HOME
 
 RUN pip install --upgrade pip && \
-    pip install -r requirements.txt && \ 
-    pwd && ls && ls home &&  \ 
-    conda update -n base -c defaults conda && \ 
-    conda env list && \ 
-    pip freeze list  && \ 
-    which mlflow 
-
+    pip install -r requirements.txt &&
+    
 EXPOSE 5000
 
 CMD - mlflow server \
@@ -27,3 +22,4 @@ CMD - mlflow server \
 # 3. set up model config via .yml
 # 4. load more examples and pipelines 
 # 5. push deploy/train output to slack/s3
+
