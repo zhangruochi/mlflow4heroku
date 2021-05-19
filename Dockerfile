@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM python:3.8
 
 LABEL maintainer "ruochi zhang"
 
